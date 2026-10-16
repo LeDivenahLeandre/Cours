@@ -121,6 +121,8 @@ L'historique apparait.
 **Trouver tout les fichiers en .py**
 
 Il faut retourner à notre racine à Documents, pour ça, on peut retourner sur le debut de notre chemin, en faisant cd /Documents
+
 *Entrer la commande find . -name "*.py"*
+
 On ne trouve que main.py.
 
