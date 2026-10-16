@@ -30,5 +30,22 @@ En ajoutant --help à une commande, on peut avoir des informations sur celle-ci.
 Par exemple, ls à d'autre paramètres, tout comme -r (permet d'inverser l'ordre)
 
 
+**Aller dans documents et afficher le contenu**
+
+*Entrer la commande : cd Documents*
+*Puis, entrer la commande : ls*
+La commande cd permet de changer de dossier, si on veut remonter, on doit faire cd ..
+
+
+**Creer un dossier**
+
+*Entrer la commande : mkdir station_meteo*
+*Puis, entrer la commande : cd station_meteo*
+*Puis, entrer la commande : mkdir -p brouillon/data*
+La commande mkdir permet de créer un dossier dans le dossier dans lequel on se situe. 
+La commande mkdir -p permet de créer, en ajouter des / à chaque
+
+
+
 
 
