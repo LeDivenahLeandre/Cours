@@ -1,0 +1,1 @@
+print('Station météo prête')
