@@ -1,0 +1,11 @@
+{
+"customizations": {
+"codespaces": {
+"customizations": {
+"permissions": {
+"LeDivenahLeandre/carnet-de-bord-ciel": "write"
+}
+}
+}
+}
+}
