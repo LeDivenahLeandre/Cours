@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InscriptionClubArduino</title>
+</head>
+<body>
+    <h1>Inscription au club Arduino</h1>
+    <h2>Veuillez remplir ce formulaire :</h2>
+
+    <form method ="POST" action="#">
+        
+        <fieldset>
+            <legend>Informations personnelle</legend>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom">
+
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom">
+
+            <label for="mail">Adresse Email</label>
+            <input type="email" name="mail">
+
+            <label for="tel">Numéro de Téléphone</label>
+            <input type="text" name="tel" pattern="[0-9 ] {10}">
+
+            <label for="datenaissance">Date de naissance</label>
+            <input type="date" name="datenaissance">
+        </fieldset>
+        <fieldset>
+            <legend>Préférences</legend>
+            <input type="radio" name="niveau" value="debutant"> Débutant
+            <input type="radio" name="niveau" value="intermediaire"> Intermédiaire
+            <input type="radio" name="niveau" value="avance"> Avancé
+
+            <input type="checkbox" name="loisirs" value="domotique"> Domotique
+            <input type="checkbox" name="loisirs" value="robotique"> Robotique
+            <input type="checkbox" name="loisirs" value="capteur"> Capteurs
+            <input type="checkbox" name="loisirs" value="reseau"> Réseau
+
+            <select>
+                <option value="opt1">mardi soir</option>
+                <option value="opt2">mercredi après-midi</option>
+                <option value="opt3">jeudi midi</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre projet</legend>
+            <label for="descprojet">Description de votre projet</label>
+            <input type="text" name="descprojet">
+
+            <label for="imgsend">Envoi de votre photo montage</label>
+            <input type="image" name="imgsend">
+        </fieldset>
+    </form>
+
+
+</body>
+</html>
