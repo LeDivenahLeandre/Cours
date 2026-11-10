@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,51 +11,65 @@
 
     <form method ="POST" action="#">
         
-        <fieldset>
-            <legend>Informations personnelle</legend>
-            <label for="nom">Nom</label>
-            <input type="text" name="nom">
+            <fieldset>
+                <legend>Identité</legend>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Dupont" required>
 
-            <label for="prenom">Prénom</label>
-            <input type="text" name="prenom">
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Jean" required>
 
-            <label for="mail">Adresse Email</label>
-            <input type="email" name="mail">
+                <label for="email">Adresse Email</label>
+                <input type="email" name="email" id="email" placeholder="dupontjean@domain.fr" required>
 
-            <label for="tel">Numéro de Téléphone</label>
-            <input type="text" name="tel" pattern="[0-9 ] {10}">
+                <label for="phone">Numéro de Téléphone</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required>
 
-            <label for="datenaissance">Date de naissance</label>
-            <input type="date" name="datenaissance">
-        </fieldset>
-        <fieldset>
-            <legend>Préférences</legend>
-            <input type="radio" name="niveau" value="debutant"> Débutant
-            <input type="radio" name="niveau" value="intermediaire"> Intermédiaire
-            <input type="radio" name="niveau" value="avance"> Avancé
+                <label for="birthdate">Date de naissance</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </fieldset>
 
-            <input type="checkbox" name="loisirs" value="domotique"> Domotique
-            <input type="checkbox" name="loisirs" value="robotique"> Robotique
-            <input type="checkbox" name="loisirs" value="capteur"> Capteurs
-            <input type="checkbox" name="loisirs" value="reseau"> Réseau
+            <fieldset>
+                <legend>Préférences</legend>
 
-            <select>
-                <option value="opt1">mardi soir</option>
-                <option value="opt2">mercredi après-midi</option>
-                <option value="opt3">jeudi midi</option>
-            </select>
-        </fieldset>
+                <label for="beginner">Débutant</label>
+                <input type="radio" name="level" id="beginner" checked>
 
-        <fieldset>
-            <legend>Votre projet</legend>
-            <label for="descprojet">Description de votre projet</label>
-            <input type="text" name="descprojet">
+                <label for="medium">Intermédiaire</label>
+                <input type="radio" name="level" id="medium">
 
-            <label for="imgsend">Envoi de votre photo montage</label>
-            <input type="image" name="imgsend">
+                <label for="advanced">Avancé</label>
+                <input type="radio" name="level" id="advanced">
 
-            <input type="checkbox" name="reglement" value="reglement"> J'accepte le règlement du club.
-        </fieldset>
+
+                <label for="homeAutomation">Domotique</label>
+                <input type="checkbox" name="interests" id="homeAutomation" value="homeAutomation">
+                <label for="robotics">Robotique</label>
+                <input type="checkbox" name="interests" id="robotics" value="robotics">
+                <label for="sensors">Capteurs</label>
+                <input type="checkbox" name="interests" id="sensors" value="sensors">
+                <label for="network">Réseau</label>
+                <input type="checkbox" name="interests" id="network" value="network">
+                
+                <label for="time">Créneaux :</label>
+                <select name="time" id="time" required>
+                    <option value="mardi soir">Mardi soir</option>
+                    <option value="mercredi apres midi">Mercredi après-midi</option>
+                    <option value="jeudi midi">Jeudi midi</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre projet</legend>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="6" cols="80" minlength="20"></textarea>
+
+                <label for="imgsend">Envoi de votre photo de montage</label>
+                <input type="file" name="imgsend" id="imgsend" accept="image/*">
+
+                <input type="checkbox" name="reglement" value="reglement" required> J'accepte le règlement du club.
+            </fieldset>
+        <button type="submit">Envoyer</button>
     </form>
 
 
