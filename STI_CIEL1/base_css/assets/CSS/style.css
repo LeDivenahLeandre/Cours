@@ -12,8 +12,10 @@
 
 .margin-inline{
     margin-inline: 40px;
+    background-color: yellow;
 }
 
 .margin-outline{
     margin : 40px;
+    background-color:yellow;
 }
