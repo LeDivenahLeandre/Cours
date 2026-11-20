@@ -1,8 +1,11 @@
+<!--Notre formulaire peut être contourner, on peut faire clic droit 
+et inspecter sur notre page. On peut donc entrer une adresse mail invalide.-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="validation.css">
     <title>InscriptionClubArduino</title>
 </head>
 <body>
@@ -13,24 +16,31 @@
         
             <fieldset>
                 <legend>Identité</legend>
-                <label for="lastname">Nom</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Dupont" required>
+                <label for="lastname">Nom *</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Dupont" 
+                minlength="2" maxlength="40" required>
 
-                <label for="firstname">Prénom</label>
+                <label for="firstname">Prénom *</label>
                 <input type="text" name="firstname" id="firstname" placeholder="Jean" required>
 
-                <label for="email">Adresse Email</label>
+                <label for="email">Adresse Email *</label>
                 <input type="email" name="email" id="email" placeholder="dupontjean@domain.fr" required>
 
-                <label for="phone">Numéro de Téléphone</label>
-                <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required>
+                <label for="phone">Numéro de Téléphone *</label>
+                <input value="0" type="tel" name="phone" id="phone" maxlenght="10" pattern="[0-9]{10}" required>
 
-                <label for="birthdate">Date de naissance</label>
-                <input type="date" id="birthdate" name="birthdate" required>
+                <label for="birthdate">Date de naissance *</label>
+                <input type="date" max ="2011-12-31" id="birthdate" name="birthdate" title="Les personnes nées après 2011 ne sont pas autorisés dans le club." required>
+
+                <label for="postal-adress">Code Postal *</label>
+                <input type="number" minlength="5" maxlength="5" title="Entrez un code postal valide de 5 chiffres." required>
+
+                <label for="username">Pseudo *</label>
+                <input type="text" pattern="[a-z0-9]{3,15}" title="Pseudo en minuscules et chiffres" required>
             </fieldset>
 
             <fieldset>
-                <legend>Préférences</legend>
+                <legend>Préférences *</legend>
 
                 <label for="beginner">Débutant</label>
                 <input type="radio" name="level" id="beginner" checked>
@@ -67,9 +77,9 @@
                 <label for="imgsend">Envoi de votre photo de montage</label>
                 <input type="file" name="imgsend" id="imgsend" accept="image/*">
 
-                <input type="checkbox" name="reglement" value="reglement" required> J'accepte le règlement du club.
+                <input type="checkbox" name="reglement" value="reglement" required> J'accepte le règlement du club.*
             </fieldset>
-        <button type="submit">Envoyer</button>
+        <button type="submit">Envoyer</button> 
     </form>
 </body>
 </html>
